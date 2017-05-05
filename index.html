@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
+    <link rel="stylesheet" href="Everyday_Decision.css">
+
+    <title></title>
+    <center><h1>Behavioural Patterns</h1></center>
+  </head>
+
+  <body background="habits.jpg">
+    <script type="text/x-handlebars-template" id="handlebarsTemp">
+
+
+  {{#each quest}}
+
+<p>{{que1}}</p>
+{{/each}}
+
+      <input type="Radio"value=""/>{{#each quest}} {{opt1}} {{/each}}<br>
+
+
+      <input type="Radio"value=""/>{{#each quest}} {{opt2}} {{/each}}<br>
+
+
+      <input type="Radio"value=""/>{{#each quest}} {{opt3}} {{/each}}<br>
+
+
+      <input type="Radio"value=""/>{{#each quest}} {{opt4}} {{/each}}<br>
+
+
+      <input type="Radio"value=""/>{{#each quest}} {{opt5}} {{/each}}<br>
+
+</script>
+<div id ="display">
+</div>
+<div id="queNumbers">
+<input type="button" value="1"id="button1">
+<input type="button" value="2"id="button2">
+<input type="button" value="3"id="button3">
+<input type="button" value="4"id="button4">
+<input type="button" value="5"id="button5">
+</div>
+
+<input type="Button" value="Submit" id="subButt">
+<!--Trial 1 html starts here  -->
+<!-- <button id="Prevbutton">Previous</button>
+<button id="Nextbutton">Next</button> -->
+<!--Trial 1 html ends here  -->
+
+
+  </body>
+  <script src="Everyday_Decision.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,22 @@
+#display,innerText{
+  background-color:white;
+  width:800px;
+}
+body{
+  background-color: #FFD433;
+}
+h1 {
+  color:white;
+  border-bottom: 8px solid white;
+  border-width: thick;
+  display: inline-block;
+}
+
+#queNumbers {
+  padding-top: 20px;
+}
+
+#subButt{
+  margin-top: 20px;
+  padding: 20px;
+}
