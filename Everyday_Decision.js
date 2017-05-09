@@ -13,39 +13,39 @@ var myOb1= [
 ];
 
 
-var myOb2=[{que1:"2.What is your nationality?"},
-           {opt1:"Nigerian."},
-           {opt2:"South African."},
-           {opt3:"Jamaican."},
-           {opt4:"American."},
-           {opt5:"Mexican."}
+var myOb2=[{que1:"2.What would you like to study in future?"},
+           {opt1:"Commerce."},
+           {opt2:"Biblical Studies."},
+           {opt3:"Information Technology."},
+           {opt4:"Accounting."},
+           {opt5:"Physical Science."}
 ];
 
 var myOb3=[
-           {que1:"3.Type of car are you driving?"},
-           {opt1:"Audi."},
-           {opt2:"Golf."},
-           {opt3:"Cresida."},
-           {opt4:"Renault."},
-           {opt5:"Mercedes-Benz."}
+           {que1:"3.Which television icon do you like?"},
+           {opt1:"Vin Diesel."},
+           {opt2:"Jessica Alba."},
+           {opt3:"Jammie Foxx."},
+           {opt4:"Eddie Murphy."},
+           {opt5:"Denzel Washington."}
 ];
 
 var myOb4=[
-           {que1:"4.What is your highest qualification?"},
-           {opt1:"Grade 8."},
-           {opt2:"Grade 12."},
-           {opt3:"Diploma."},
-           {opt4:"Degree."},
-           {opt5:"Honours."}
+           {que1:"4.What type of movie do you like"},
+           {opt1:"Action."},
+           {opt2:"Romance."},
+           {opt3:"Drama."},
+           {opt4:"Comedy."},
+           {opt5:"Triller."}
 ];
 
 var myOb5=[
-           {que1:"5.When were you born?"},
-           {opt1:"1980-1990"},
-           {opt2:"1991-1993"},
-           {opt3:"1994-1996"},
-           {opt4:"1997-2000"},
-           {opt5:"2001-2010"}
+           {que1:"5.What is your dream job?"},
+           {opt1:"Librarian"},
+           {opt5:"Cleaner"},
+           {opt2:"Technician"},
+           {opt3:"Policeman"},
+           {opt4:"Nurse"}
 ];
 
  var done=[
@@ -134,42 +134,33 @@ subButt.addEventListener("click",function(){
   })();
 })
 
+var myRadios=document.getElementById("myRadios");
+var radioButt1= document.getElementById('radioButt1');
+var radioButt2= document.getElementById('radioButt2');
+var radioButt3= document.getElementById('radioButt3');
+var radioButt4= document.getElementById('radioButt4');
+var radioButt5= document.getElementById('radioButt5');
+var myRadios=document.getElementsByName("foo");
+var seconds=document.getElementById('seconds');
+var store=[];
+addEventListener("change",function(){
+//for (var i = 0; i < myRadios.length; i++) {
+  if(myRadios[0].checked) {
+ store.push(myRadios[0].id);
+ seconds.innerHTML="Button1 clicked";
+  }
+  if(myRadios[1].checked) {
+ alert(myRadios[1].id);
+  }
+  else if(myRadios[2].checked) {
+ alert(myRadios[2].id);
+  }
+  else if(myRadios[3].checked) {
+ alert(myRadios[3].id);
+  }
+  else if(myRadios[4].checked) {
+ alert(myRadios[4].id);
+  }
 
 
-
-
-
-
-
-
-
-
-
-//First trial of previous and next buttons starts here.
-
-//var Prevbutton = document.getElementById('Prevbutton');
-//var Nextbutton= document.getElementById('Nextbutton');
-
-// Prevbutton.addEventListener("click",function(){
-//   (function() {
-//       var view = tempComp({
-//           quest:myOb
-//
-//       });
-//       display.innerHTML = view;
-//   })();
-// })
-//
-//
-//
-// Nextbutton.addEventListener("click", function(){
-//   (function() {
-//       var view = tempComp({
-//           quest:myOb1
-//
-//
-//       });
-//       display.innerHTML = view;
-//   })();
-//First trial of previous and next buttons ends here.
-//})
+  })
