@@ -1,3 +1,5 @@
+var disp1 = document.getElementById("disp1");
+var storage= localStorage.getItem("count");
 var handlebarsTemp=document.getElementById("handlebarsTemp");
 var tempComp = Handlebars.compile(handlebarsTemp.innerHTML);
 var display = document.getElementById('display');
@@ -6,9 +8,9 @@ var display = document.getElementById('display');
 var myOb1= [
 {que1:"1.What would you do if you came across an accident and people are critically injured?"},
 {opt1:"Call the police."},
-{opt2:"Call for medical help."},
+{opt2:"Contact medical help."},
 {opt3:"Take out your phone take a photo and update your facebook status."},
-{opt4:"Take the victims wallets and phones."},
+{opt4:"keep the victims wallets and phones."},
 {opt5:"Walk away as if you saw nothing"}
 ];
 
@@ -74,7 +76,10 @@ button1.addEventListener("click",function(){
 
       });
       display.innerHTML = view;
+
   })();
+
+
 })
 
 button2.addEventListener("click",function(){
@@ -84,6 +89,7 @@ button2.addEventListener("click",function(){
 
       });
       display.innerHTML = view;
+
   })();
 })
 
@@ -122,8 +128,6 @@ button5.addEventListener("click",function(){
 var subButt= document.getElementById('subButt');
 
 
-
-
 subButt.addEventListener("click",function(){
   (function() {
       var view = tempComp({
@@ -142,25 +146,40 @@ var radioButt4= document.getElementById('radioButt4');
 var radioButt5= document.getElementById('radioButt5');
 var myRadios=document.getElementsByName("foo");
 var seconds=document.getElementById('seconds');
-var store=[];
+var store=[[0],[1]];
+
+var disp2=document.getElementById("disp2");
+var disp3=document.getElementById("disp3");
+var disp4=document.getElementById("disp4");
+var disp5=document.getElementById("disp5");
+
+
 addEventListener("change",function(){
 //for (var i = 0; i < myRadios.length; i++) {
   if(myRadios[0].checked) {
  store.push(myRadios[0].id);
  seconds.innerHTML="Button1 clicked";
+ storage=seconds.innerHTML;
   }
   if(myRadios[1].checked) {
- alert(myRadios[1].id);
+ store.push(myRadios[1].id);
+ disp2.innerHTML="Button2 clicked";
+ storage=disp2.innerHTML;
   }
   else if(myRadios[2].checked) {
- alert(myRadios[2].id);
+ store.push(myRadios[2].id);
+ disp3.innerHTML="Button3 clicked";
+ storage=disp3.innerHTML;
   }
   else if(myRadios[3].checked) {
- alert(myRadios[3].id);
+ store.push(myRadios[3].id);
+ disp4.innerHTML="Button4 clicked";
+ storage=disp4.innerHTML;
   }
   else if(myRadios[4].checked) {
- alert(myRadios[4].id);
+ store.push(myRadios[4].id);
+ disp5.innerHTML="Button5 clicked";
+ storage=disp5.innerHTML;
   }
 
-
-  })
+})
