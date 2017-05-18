@@ -5,6 +5,8 @@ var tempComp = Handlebars.compile(handlebarsTemp.innerHTML);
 var display = document.getElementById('display');
 
 
+
+
 var myOb1= [
 {que1:"1.What would you do if you came across an accident and people are critically injured?"},
 {opt1:"Call the police."},
@@ -52,16 +54,20 @@ var myOb5=[
 
  var done=[
             {que1:"Well Done You Succesfully Completed!"}
- ];
 
 
-(function() {
-    var view = tempComp({
-        quest:myOb1
 
-    });
-    display.innerHTML = view;
-})();
+];
+
+
+
+// (function() {
+//     var view = tempComp({
+//         quest:myOb1
+//
+//     });
+//     display.innerHTML = view;
+// })();
 
 var button1=document.getElementById('button1');
 var button2=document.getElementById('button2');
@@ -80,6 +86,8 @@ button1.addEventListener("click",function(){
   })();
 
 
+
+
 })
 
 button2.addEventListener("click",function(){
@@ -91,6 +99,10 @@ button2.addEventListener("click",function(){
       display.innerHTML = view;
 
   })();
+
+
+
+
 })
 
 button3.addEventListener("click",function(){
@@ -157,29 +169,55 @@ var disp5=document.getElementById("disp5");
 addEventListener("change",function(){
 //for (var i = 0; i < myRadios.length; i++) {
   if(myRadios[0].checked) {
- store.push(myRadios[0].id);
+ //store.push(myRadios[0].id);
  seconds.innerHTML="Button1 clicked";
- storage=seconds.innerHTML;
+ //storage=seconds.innerHTML;
   }
   if(myRadios[1].checked) {
  store.push(myRadios[1].id);
  disp2.innerHTML="Button2 clicked";
- storage=disp2.innerHTML;
+ //storage=disp2.innerHTML;
   }
   else if(myRadios[2].checked) {
  store.push(myRadios[2].id);
  disp3.innerHTML="Button3 clicked";
- storage=disp3.innerHTML;
+ //storage=disp3.innerHTML;
   }
   else if(myRadios[3].checked) {
  store.push(myRadios[3].id);
  disp4.innerHTML="Button4 clicked";
- storage=disp4.innerHTML;
+ //storage=disp4.innerHTML;
   }
   else if(myRadios[4].checked) {
  store.push(myRadios[4].id);
- disp5.innerHTML="Button5 clicked";
- storage=disp5.innerHTML;
+ disp5.innerHTML="Button 5 clicked";
+ //storage=disp5.innerHTML;
   }
+
+
+
+
+
+
+  var test = [myOb1,myOb2,myOb3,myOb4,myOb5];
+  for (var i=0;i<test.length;i++) {
+  if(test[i]===myOb1){
+
+
+
+  for(var i=0;i<myOb1.length;i++){
+
+    if (myRadios[1].checked){
+      document.body.style.background="green";
+    }
+
+     else if (!myRadios[1].checked) {
+  document.body.style.background="red";
+    }
+
+  }
+  }
+  }
+
 
 })
